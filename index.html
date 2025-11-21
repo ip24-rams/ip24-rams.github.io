@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isa Penelas — Concert World</title>
+  <!-- Google Font: Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ivory: #f8f5e9;
+      --navy: #001f3f;
+      --blue: #3b6ea5;
+      --muted: #e8e3d7;
+      --card-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      --radius: 16px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body {
+      margin: 0;
+      font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--ivory);
+      color: var(--navy);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    header{
+      background: linear-gradient(120deg, rgba(59,110,165,0.95), rgba(0,31,63,0.95));
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+    }
+    header h1{margin:0;font-weight:700;letter-spacing:0.6px;font-size:clamp(1.4rem,2.6vw,2.2rem)}
+    header p{opacity:.95;margin-top:8px;font-weight:300}
+
+    nav{
+      display:flex;gap:12px;justify-content:center;padding:14px 10px;background:transparent;position:sticky;top:0;z-index:40;margin-top:-20px
+    }
+    nav a{
+      text-decoration:none;padding:8px 14px;border-radius:999px;font-weight:600;color:var(--navy);background:var(--muted);box-shadow:var(--card-shadow);
+    }
+    nav a:hover{transform:translateY(-2px)}
+
+    .wrap{max-width:1100px;margin:30px auto;padding:0 20px;display:grid;grid-template-columns:1fr;gap:18px}
+
+    /* Card style for each section */
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.8));
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow: var(--card-shadow);
+      border:1px solid rgba(27,40,60,0.05);
+    }
+
+    h2{margin-top:0;margin-bottom:8px;font-weight:600}
+    p.lead{color:rgba(0,31,63,0.85);margin-bottom:0}
+
+    table{width:100%;border-collapse:collapse;margin-top:12px;border-radius:10px;overflow:hidden}
+    th,td{padding:12px;border-bottom:1px solid rgba(59,110,165,0.12);}
+    th{background:var(--blue);color:#fff;text-align:left}
+
+    ul.simple{padding-left:20px;margin:10px 0}
+
+    .gallery{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+    .gallery .thumb{flex:1 1 calc(33% - 12px);min-width:160px;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,var(--muted),#fff);display:flex;align-items:center;justify-content:center;padding:8px}
+    .gallery img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:12px}
+    .video-grid iframe{width:100%;height:180px;border-radius:10px;border:0}
+
+    /* subtle utility */
+    .muted{color:rgba(0,31,63,0.6);font-size:.95rem}
+
+    @media (max-width:800px){
+      .gallery .thumb{flex-basis:48%}
+      .video-grid iframe{height:200px}
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Isa Penelas — My Love for Concerts</h1>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#concerts">Concert List</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#videos">Videos</a>
+  </nav>
+
+  <div class="container card" id="home" style="background:#eef6ff;">
+    <h2>Why I Love Concerts</h2>
+    <div style="display:flex; gap:20px; align-items:center; flex-wrap:wrap;">
+      <img src="images/pic1.jpg" alt="Me and a friend at Lorde MSG" style="width:260px; height:300px; object-fit:cover; border-radius:16px; box-shadow:var(--card-shadow);" />
+      <p style="flex:1; min-width:260px;">
+        Since around 2021, I developed a love for concerts and live music. Being
+        able to witness an artist perform their art live with such passion and love 
+        for what they do feels contaagious as an audience memeber and stimulates my 
+        own personal happiness. Nothing compares to the feeling of being in a crowd
+        full of people who all love the same music. Concerts make me feel connected, 
+        and I love collecting these moments that I can fondly reminisce.
+      </p>
+    </div> 
+
+    <h3 style="margin-top:24px;">Upcoming Tours I Want to Attend</h3>
+    <ul class="simple">
+      <li><a href="https://sports.ffm.to/sportstour" target="_blank">Sports — NYC Tour</a></li>
+      <li><a href="https://www.alicephoebelou.com/concerts/" target="_blank">Alice Phoebe Lou — NYC Tour</a></li>
+    </ul>
+  </div>
+  </div>
+
+  <div class="container" id="concerts">
+    <h2>A Breif Glipse Into Some Concerts I've Been To</h2>
+    <table>
+      <tr>
+        <th>Artist</th>
+        <th>Year</th>
+      </tr>
+      <tr>
+        <td>Lana Del Rey</td>
+        <td>2014</td>
+      </tr>
+      <tr>
+        <td>Taylor Swift</td>
+        <td>2016</td>
+      </tr>
+      <tr>
+        <td>Harry Styles</td>
+        <td>2021</td>
+      </tr>
+      <tr>
+        <td>Phoebe Bridgers</td>
+        <td>2022</td>
+      </tr>
+      <tr>
+        <td>Suki Waterhouse</td>
+        <td>2023</td>
+      </tr>
+      <tr>
+        <td>Clairo</td>
+        <td>2024</td>
+      </tr>
+      <tr>
+        <td>Lorde</td>
+        <td>2025</td>
+      </tr>
+    </table>
+
+    <h3>Some Artists I've Seen Multiple Times</h3>
+    <ul>
+      <li>Harry Styles (x4)</li>
+      <li>Gracie Abrams (x4)</li>
+      <li>Clairo (x3)</li>
+      <li>The Marías (x3)</li>
+      <li>Suki Waterhouse (x3)</li>
+      <li>Phoebe Bridgers (x2)</li>
+      <li>Role Model (x2)</li>
+      <li>Dom Dolla (x2)</li>
+      <li>Tyler, the Creator (x2)</li>
+    </ul>
+  </div>
+
+  <div class="container card" id="gallery" style="background:#eef6ff;">
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+      <div class="thumb"><img src="images/pic9.jpg" alt="Suki Waterhouse"></div>
+      <div class="thumb"><img src="images/pic5.jpg" alt="Lollapalloza"></div>
+      <div class="thumb"><img src="images/pic10.jpg" alt="The Marias"></div>
+      <div class="thumb"><img src="images/pic7.jpg" alt="Gracie Abrams"></div>
+      <div class="thumb"><img src="images/pic8.jpg" alt="Harry Styles"></div>
+      <div class="thumb"><img src="images/pic3.jpg" alt="Lorde"></div>
+      <div class="thumb"><img src="images/pic2.jpg" alt="Role Model"></div>
+      <div class="thumb"><img src="images/pic4.jpg" alt="Clairo"></div>
+    </div>
+  </div>
+
+  <div class="container" id="videos">
+    <h2>Concerts I Wish I Was Alive For</h2>
+    <div class="video">
+       <iframe 
+         width="560" 
+         height="315" 
+         src="https://www.youtube.com/embed/eDwi-8n054s" 
+         frameborder="0" 
+         allowfullscreen>
+      </iframe>
+    </div>
+    <div class="video">
+      <iframe 
+       width="560" 
+       height="315" 
+       src="https://www.youtube.com/embed/CauNjt2j-BM" 
+       frameborder="0" 
+       allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</body>
+</html>
